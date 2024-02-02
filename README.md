@@ -58,6 +58,8 @@ library(ggplot2)
 ggplot(r_over_time) + geom_line(aes(x = year, y = fraction))
 ```
 
+![Fig01](https://github.com/psungg/Rise-and-Fall-of-Programming-Languages/blob/main/Images/Fig01.png)
+
 ## 5. How about dplyr and ggplot2?
 <p>Based on that graph, it looks like R has been growing pretty fast in the last decade. Good thing we're practicing it now!</p>
 <p>Besides R, two other interesting tags are dplyr and ggplot2, which we've already used in this analysis. They both also have Stack Overflow tags!</p>
@@ -74,6 +76,8 @@ selected_tags_over_time <- by_tag_year_fraction  %>%
 # Plot tags over time on a line plot using color to represent tag
 ggplot(selected_tags_over_time) + geom_line(aes(x = year, y = fraction, color = tag))
 ```
+
+![Fig02](https://github.com/psungg/Rise-and-Fall-of-Programming-Languages/blob/main/Images/Fig02.png)
 
 ## 6. What are the most asked-about tags?
 <p>It's sure been fun to visualize and compare tags over time. The dplyr and ggplot2 tags may not have as many questions as R, but we can tell they're both growing quickly as well.</p>
@@ -106,6 +110,8 @@ filter(tag %in% highest_tags )
 ggplot(by_tag_subset, aes(x = year, y = fraction, color = tag)) + geom_line()
 ```
 
+![Fig03](https://github.com/psungg/Rise-and-Fall-of-Programming-Languages/blob/main/Images/Fig03.png)
+
 8. Some more tags!
 Wow, based on that graph we've seen a lot of changes in what programming languages are most asked about. C# gets fewer questions than it used to, and Python has grown quite impressively.
 
@@ -124,3 +130,5 @@ filter(tag %in% my_tags)
 # Plot tags over time on a line plot using color to represent tag
 ggplot(by_tag_subset, aes(x = year, y = fraction, color = tag)) + geom_line()
 ```
+
+![Fig04](https://github.com/psungg/Rise-and-Fall-of-Programming-Languages/blob/main/Images/Fig04.png)
